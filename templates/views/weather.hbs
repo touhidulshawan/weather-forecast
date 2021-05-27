@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    {{>header}}
+    <div class="weather__container">
+        <h1 class="weather__heading">Weather</h1>
+        <form id="weather__form" action="/weather" method="POST">
+            <input value="" type="text" name="cityName" id="cityName" placeholder="Enter city name" required>
+            <button type="submit" class="search">Search</button>
+        </form>
+        <div class="weather__stat">
+            <p class="forecast">{{forecast}}</p>
+            <p class="temp">{{message}}</p>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+
+</html>
